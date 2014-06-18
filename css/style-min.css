@@ -340,9 +340,9 @@ input, input:active, input:focus {
   text-decoration: none;
   font-size: 12px;
   vertical-align: middle;
-  -webkit-border-radius: "5px";
-  -moz-border-radius: "5px";
-  border-radius: "5px";
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 input[type="checkbox"], input[type="radio"] {
   border: none;
@@ -365,9 +365,9 @@ a.button:link {
   text-decoration: none;
   font-size: 12px;
   vertical-align: middle;
-  -webkit-border-radius: "5px";
-  -moz-border-radius: "5px";
-  border-radius: "5px";
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   padding: 5px 20px 5px 20px;
   background: #aaa;
   color: #000;
