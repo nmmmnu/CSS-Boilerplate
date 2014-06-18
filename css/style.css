@@ -18,9 +18,13 @@
 	text-align: left;
 }
 
+
+
 .right{
 	text-align: right;
 }
+
+
 
 .center{
 	text-align: center;
@@ -39,7 +43,9 @@ center{
 	width: 100%;
 }
 
-.height-control div{
+
+
+.height-control > div{
 	display: table-cell;
 	-border: solid 1px black;
 	-background: yellow;
@@ -58,12 +64,16 @@ body{
 	background: #fff;
 }
 
+
+
 a,
 a:link,
 a:visited{
 	color: #007;
 	font-weight: bold;
 }
+
+
 
 a:hover{
 	color: #00A;
@@ -86,6 +96,8 @@ blockquote{
 	margin-left: 20px;
 	padding-left: 20px;
 }
+
+
 
 blockquote:before {
 	font-size: 50px;
@@ -133,10 +145,14 @@ table{
 	margin: 2px;
 }
 
+
+
 table th,
 table td{
 	padding: 3px 15px 3px 15px;
 }
+
+
 
 table[border]{
 	border: solid 1px black;
@@ -146,15 +162,23 @@ table[border]{
 	box-shadow: 1px 1px #000;
 }
 
-table[border] th{
+
+
+table[border] > thead > tr > th,
+table[border] > tfoot > tr > th,
+table[border] > tbody > tr > th{
 	background: #aaa;
 }
 
-table[border] tr:nth-child(odd){
+
+
+table[border] > tbody > tr:nth-child(odd){
 	background:#eee;
 }
 
-table[border] tr:hover{
+
+
+table[border] > tbody > tr:hover{
 }
 
 
@@ -197,18 +221,13 @@ select,
 	        border-radius: 5px;
 }
 
+
+
 input[type="checkbox"],
 input[type="radio"]{
 	border: none;
 	box-shadow: none;
 	margin-left: 10px;
-}
-
-input:disabled,
-button:disabled,
-textarea:disabled,
-select:disabled{
-	border: solid 1px #aaa;
 }
 
 
@@ -238,8 +257,16 @@ a.button:link{
 	background: #aaa;
 	color: #000;
 	font-weight: bold;
-	-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33);
+	--text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33);
+	
+	background-image: -webkit-linear-gradient(top, #aaa, #eee, #aaa);
+	background-image:      -o-linear-gradient(top, #aaa, #eee, #aaa);
+	background-image:    -moz-linear-gradient(top, #aaa, #eee, #aaa);
+	background-image:     -ms-linear-gradient(top, #aaa, #eee, #aaa);
+	background-image:         linear-gradient(top, #aaa, #eee, #aaa);
 }
+
+
 
 button:hover,
 
@@ -254,6 +281,24 @@ a.button:hover{
 
 
 
+input:disabled,
+button:disabled,
+textarea:disabled,
+select:disabled,
+.button[disabled],
+a.button[disabled]{
+	border: solid 1px #aaa;
+	background: #eee;
+	background-image: none;
+}
+
+a.button[disabled]{
+       pointer-events: none;
+       cursor: default;
+}
+
+
+
 /*
  * Forms
  */
@@ -263,24 +308,32 @@ form.table{
 	text-align: left;
 }
 
-form.table div{
+
+
+form.table > div{
 	display: block;
 	margin-bottom: 3px;
 }
 
-form.table div label{
+
+
+form.table > div > label{
 	display: inline-block;
 	text-align: right;
 
 	width: 200px;
 }
 
-form.table div label:after{
+
+
+form.table > div > label:after{
 	content: ' : ';
 	margin-right: 5px;
 }
 
-form.table div label:empty:after{
+
+
+form.table > div > label:empty:after{
 	content: '';
 }
 
