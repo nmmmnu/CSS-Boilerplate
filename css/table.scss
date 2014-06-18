@@ -1,0 +1,36 @@
+table{
+	display: inline-block;
+	text-align: left;
+	margin: 2px;
+	
+	th,
+	td{
+		padding: 3px 15px 3px 15px;
+	}
+}
+
+
+/* **************************************** */
+
+
+table[border]{
+	@include box-transperant();
+	
+	border-collapse: collapse;
+	empty-cells: show;
+
+	> thead > tr > th,
+	> tfoot > tr > th,
+	> tbody > tr > th{
+		background: $middle;
+	}
+	
+	> tbody > tr:nth-child(odd){
+		background: $light;
+	}
+	
+	tbody > tr:hover{
+	}
+}
+
+

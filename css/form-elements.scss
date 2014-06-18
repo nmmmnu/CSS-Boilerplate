@@ -1,0 +1,56 @@
+
+input{
+	&,
+	&:active,
+	&:focus{
+		@include form-element();
+	}
+	
+	
+	&[type="checkbox"],
+	&[type="radio"]{
+		border: none;
+		box-shadow: none;
+		margin-left: 10px;
+	}
+}
+
+
+/* ********************************************* */
+
+
+button,
+input[type="submit"],
+input[type="reset"],
+.button,
+a.button{
+	&,
+	&:active,
+	&:focus,
+	
+	&:visited,
+	&:link{
+		@include form-element();
+
+		padding: 5px 20px 5px 20px;
+		background: $middle;
+		color: $black;
+		font-weight: bold;
+		
+		@include linear-gradient($middle, $light, $middle);
+	}
+
+	&:hover{
+		background: $light;
+	}
+	
+	&:disabled,
+	&[disabled]{
+		border: solid 1px $middle;
+		background: $light;
+		background-image: none;
+		
+		pointer-events: none;
+		cursor: default;
+	}
+}

@@ -1,0 +1,49 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	        border-radius: $radius;
+}
+
+
+@mixin linear-gradient($a, $b, $c){
+	background-image: -webkit-linear-gradient(top, $a, $b, $c);
+	background-image:      -o-linear-gradient(top, $a, $b, $c);
+	background-image:    -moz-linear-gradient(top, $a, $b, $c);
+	background-image:     -ms-linear-gradient(top, $a, $b, $c);
+	background-image:         linear-gradient(top, $a, $b, $c);
+}
+
+
+@mixin box-transperant() {
+	border: solid 1px $black;
+	box-shadow: 1px 1px $black;
+}
+
+
+@mixin box() {
+	@include box-transperant();
+	
+	background: $light;
+}
+
+
+@mixin form-element() {
+	@include box-transperant();
+
+	padding: 5px;
+	margin: 2px;
+
+	color: $black;
+
+	background: $white;
+
+	text-decoration: none;
+
+	font-size: 12px;
+
+	vertical-align: middle;
+
+	@include border-radius("5px");
+}
+
+

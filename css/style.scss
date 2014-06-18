@@ -1,0 +1,25 @@
+/*
+Generate with:
+pyscss -C style.scss > style-min.css
+*/
+
+@import url("normalize.css");
+
+
+$white  = #fff;
+$black  = #000;
+$middle = #aaa;
+$light  = #eee;
+$link   = #007;
+
+@import "mixins.scss";
+
+@import "grid.scss";
+@import "tools.scss";
+@import "typography.scss";
+@import "table.scss";
+@import "form-elements.scss";
+@import "form.scss";
+
+
+

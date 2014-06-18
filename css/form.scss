@@ -1,0 +1,30 @@
+form.table{
+	display: inline-block;
+	text-align: left;
+
+
+	> div{
+		display: block;
+		margin-bottom: 3px;
+		
+		
+		> label{
+			display: inline-block;
+			text-align: right;
+
+			width: 200px;
+			
+			
+			&:after{
+				content: ' : ';
+				margin-right: 5px;
+			}
+
+
+			&:empty:after{
+				content: '';
+			}
+		}
+	}
+}
+

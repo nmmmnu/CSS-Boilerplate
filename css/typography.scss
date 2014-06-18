@@ -1,0 +1,70 @@
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	color: $black;
+	background: $white;
+}
+
+
+a{
+	&,
+	&:link,
+	&:visited{
+		color: $link;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	
+
+	&:hover{
+		color: $link - #004;
+		text-decoration: underline;
+	}
+}
+
+
+/*
+p:first-letter {
+	font-size: 150%;
+	text-transform: uppercase;
+}
+*/
+
+
+blockquote{
+	border-left: solid 5px $middle;
+	padding-left: 20px;
+	
+
+	&:before {
+		font-size: 50px;
+		font-weight: bold;
+		color: $middle;
+
+		content: open-quote;
+		float: left;
+
+		padding-right: 10px;
+	}
+
+}
+
+
+pre,
+code{
+	@include box();
+
+	overflow: auto;
+
+	margin: 3px;
+	padding: 10px 10px 10px 20px;
+}
+
+
+hr{
+	border: 0px;
+	height: 1px;
+	background: $black;
+}
+
+
