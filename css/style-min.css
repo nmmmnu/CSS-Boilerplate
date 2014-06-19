@@ -326,6 +326,7 @@ table[border] {
 table[border] > thead > tr > th, table[border] > tfoot > tr > th,
 table[border] > tbody > tr > th {
   background: #aaa;
+  text-align: center;
 }
 table[border] > tbody > tr:nth-child(odd) {
   background: #eee;
@@ -388,7 +389,7 @@ input[type="reset"][disabled], .button:disabled, .button[disabled],
 a.button:disabled, a.button[disabled] {
   border: solid 1px #aaa;
   background: #eee;
-  background-image: none;
+  color: #aaa;
   pointer-events: none;
   cursor: default;
 }

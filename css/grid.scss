@@ -8,6 +8,7 @@ sm	=	 568	,	@media screen and (min-width:  568px)
 */
 
 
+
 .col-1	,	.col-xl-1	,	.col-lg-1	,	.col-md-1	,	.col-sm-1	,
 .col-2	,	.col-xl-2	,	.col-lg-2	,	.col-md-2	,	.col-sm-2	,
 .col-3	,	.col-xl-3	,	.col-lg-3	,	.col-md-3	,	.col-sm-3	,
@@ -33,110 +34,57 @@ sm	=	 568	,	@media screen and (min-width:  568px)
 
 
 
+@mixin grid($res){
+.col#{$res}-1	{ width:   8.33%;}
+.col#{$res}-2	{ width:  16.66%;}
+.col#{$res}-3	{ width:  25.00%;}
+.col#{$res}-4	{ width:  33.33%;}
+.col#{$res}-5	{ width:  41.66%;}
+.col#{$res}-6	{ width:  50.00%;}
+.col#{$res}-7	{ width:  58.33%;}
+.col#{$res}-8	{ width:  66.66%;}
+.col#{$res}-9	{ width:  75.00%;}
+.col#{$res}-10	{ width:  83.33%;}
+.col#{$res}-11	{ width:  91.66%;}
+.col#{$res}-12	{ width: 100.00%;}
+
+.col#{$res}-f2	{ width:  61.80%;}
+.col#{$res}-f1	{ width:  38.20%;}
+.col#{$res}-f0	{ width:  23.60%;}
+}
+
+
+
 /* Default values, not responsive */
 
-.col-1		{ width:   8.33%;}
-.col-2		{ width:  16.66%;}
-.col-3		{ width:  25.00%;}
-.col-4		{ width:  33.33%;}
-.col-5		{ width:  41.66%;}
-.col-6		{ width:  50.00%;}
-.col-7		{ width:  58.33%;}
-.col-8		{ width:  66.66%;}
-.col-9		{ width:  75.00%;}
-.col-10		{ width:  83.33%;}
-.col-11		{ width:  91.66%;}
-.col-12		{ width: 100.00%;}
-
-.col-f2		{ width:  61.80%;}
-.col-f1		{ width:  38.20%;}
-.col-f0		{ width:  23.60%;}
+@include grid("");
 
 
 
 /* lg 568 - 768, under this width: 100% will be used */
 @media (min-width:  568px){
-.col-sm-1	{ width:   8.33%;}
-.col-sm-2	{ width:  16.66%;}
-.col-sm-3	{ width:  25.00%;}
-.col-sm-4	{ width:  33.33%;}
-.col-sm-5	{ width:  41.66%;}
-.col-sm-6	{ width:  50.00%;}
-.col-sm-7	{ width:  58.33%;}
-.col-sm-8	{ width:  66.66%;}
-.col-sm-9	{ width:  75.00%;}
-.col-sm-10	{ width:  83.33%;}
-.col-sm-11	{ width:  91.66%;}
-.col-sm-12	{ width: 100.00%;}
-
-.col-sm-f2	{ width:  61.80%;}
-.col-sm-f1	{ width:  38.20%;}
-.col-sm-f0	{ width:  23.60%;}
+@include grid("-sm");
 }
 
 
 
 /* lg 768 - 1024 */
 @media (min-width:  768px){
-.col-md-1	{ width:   8.33%;}
-.col-md-2	{ width:  16.66%;}
-.col-md-3	{ width:  25.00%;}
-.col-md-4	{ width:  33.33%;}
-.col-md-5	{ width:  41.66%;}
-.col-md-6	{ width:  50.00%;}
-.col-md-7	{ width:  58.33%;}
-.col-md-8	{ width:  66.66%;}
-.col-md-9	{ width:  75.00%;}
-.col-md-10	{ width:  83.33%;}
-.col-md-11	{ width:  91.66%;}
-.col-md-12	{ width: 100.00%;}
-
-.col-md-f2	{ width:  61.80%;}
-.col-md-f1	{ width:  38.20%;}
-.col-md-f0	{ width:  23.60%;}
+@include grid("-md");
 }
+
 
 
 /* lg 1024 - 1280 */
 @media (min-width: 1024px){
-.col-lg-1	{ width:   8.33%;}
-.col-lg-2	{ width:  16.66%;}
-.col-lg-3	{ width:  25.00%;}
-.col-lg-4	{ width:  33.33%;}
-.col-lg-5	{ width:  41.66%;}
-.col-lg-6	{ width:  50.00%;}
-.col-lg-7	{ width:  58.33%;}
-.col-lg-8	{ width:  66.66%;}
-.col-lg-9	{ width:  75.00%;}
-.col-lg-10	{ width:  83.33%;}
-.col-lg-11	{ width:  91.66%;}
-.col-lg-12	{ width: 100.00%;}
-
-.col-lg-f2	{ width:  61.80%;}
-.col-lg-f1	{ width:  38.20%;}
-.col-lg-f0	{ width:  23.60%;}
+@include grid("-lg");
 }
 
 
 
 /* xl 1280 and above */
 @media (min-width: 1280px){
-.col-xl-1	{ width:   8.33%;}
-.col-xl-2	{ width:  16.66%;}
-.col-xl-3	{ width:  25.00%;}
-.col-xl-4	{ width:  33.33%;}
-.col-xl-5	{ width:  41.66%;}
-.col-xl-6	{ width:  50.00%;}
-.col-xl-7	{ width:  58.33%;}
-.col-xl-8	{ width:  66.66%;}
-.col-xl-9	{ width:  75.00%;}
-.col-xl-10	{ width:  83.33%;}
-.col-xl-11	{ width:  91.66%;}
-.col-xl-12	{ width: 100.00%;}
-
-.col-xl-f2	{ width:  61.80%;}
-.col-xl-f1	{ width:  38.20%;}
-.col-xl-f0	{ width:  23.60%;}
+@include grid("-xl");
 }
 
 

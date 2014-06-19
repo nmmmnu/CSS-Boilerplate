@@ -2,7 +2,7 @@ table{
 	display: inline-block;
 	text-align: left;
 	margin: 2px;
-	
+
 	th,
 	td{
 		padding: 3px 15px 3px 15px;
@@ -15,7 +15,7 @@ table{
 
 table[border]{
 	@include box-transperant();
-	
+
 	border-collapse: collapse;
 	empty-cells: show;
 
@@ -23,12 +23,13 @@ table[border]{
 	> tfoot > tr > th,
 	> tbody > tr > th{
 		background: $middle;
+		text-align: center;
 	}
-	
+
 	> tbody > tr:nth-child(odd){
 		background: $light;
 	}
-	
+
 	tbody > tr:hover{
 	}
 }

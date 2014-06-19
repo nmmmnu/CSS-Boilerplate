@@ -5,8 +5,8 @@ input{
 	&:focus{
 		@include form-element();
 	}
-	
-	
+
+
 	&[type="checkbox"],
 	&[type="radio"]{
 		border: none;
@@ -27,7 +27,7 @@ a.button{
 	&,
 	&:active,
 	&:focus,
-	
+
 	&:visited,
 	&:link{
 		@include form-element();
@@ -36,20 +36,20 @@ a.button{
 		background: $middle;
 		color: $black;
 		font-weight: bold;
-		
+
 		@include linear-gradient($middle, $light, $middle);
 	}
 
 	&:hover{
 		background: $light;
 	}
-	
+
 	&:disabled,
 	&[disabled]{
 		border: solid 1px $middle;
 		background: $light;
-		background-image: none;
-		
+		color: $middle;
+
 		pointer-events: none;
 		cursor: default;
 	}
