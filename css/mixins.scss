@@ -29,21 +29,25 @@
 
 @mixin form-element() {
 	@include box-transperant();
+	@include border-radius(5px);
 
-	padding: 5px;
 	margin: 2px;
-
-	color: $black;
-
-	background: $white;
-
-	text-decoration: none;
+	padding: 5px;
 
 	font-size: 12px;
+	color: $black;
 
 	vertical-align: middle;
+	
+	
+	&:disabled,
+	&[disabled]{
+		border: solid 1px $middle;
+		background: $light;
+		color: $middle;
 
-	@include border-radius(5px);
+		pointer-events: none;
+		cursor: default;
+	}
 }
-
 

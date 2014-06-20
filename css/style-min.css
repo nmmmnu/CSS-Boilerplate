@@ -331,19 +331,18 @@ table[border] > tbody > tr > th {
 table[border] > tbody > tr:nth-child(odd) {
   background: #eee;
 }
-input, input:active, input:focus {
+input {
   border: solid 1px #000;
   box-shadow: 1px 1px #000;
-  padding: 5px;
-  margin: 2px;
-  color: #000;
-  background: #fff;
-  text-decoration: none;
-  font-size: 12px;
-  vertical-align: middle;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  margin: 2px;
+  padding: 5px;
+  font-size: 12px;
+  color: #000;
+  vertical-align: middle;
+  background: #fff;
 }
 input[type="checkbox"], input[type="radio"] {
   border: none;
@@ -359,20 +358,19 @@ input[type="reset"]:link, .button, .button:active, .button:focus, .button:visite
 a.button:link {
   border: solid 1px #000;
   box-shadow: 1px 1px #000;
-  padding: 5px;
-  margin: 2px;
-  color: #000;
-  background: #fff;
-  text-decoration: none;
-  font-size: 12px;
-  vertical-align: middle;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  padding: 5px 20px 5px 20px;
-  background: #aaa;
+  margin: 2px;
+  padding: 5px;
+  font-size: 12px;
   color: #000;
+  vertical-align: middle;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #aaa;
   font-weight: bold;
+  text-decoration: none;
   background-image: -webkit-linear-gradient(top, #aaa, #eee, #aaa);
   background-image: -o-linear-gradient(top, #aaa, #eee, #aaa);
   background-image: -moz-linear-gradient(top, #aaa, #eee, #aaa);
@@ -383,10 +381,33 @@ button:hover, input[type="submit"]:hover, input[type="reset"]:hover, .button:hov
 a.button:hover {
   background: #eee;
 }
-button:disabled, button[disabled], input[type="submit"]:disabled,
-input[type="submit"][disabled], input[type="reset"]:disabled,
-input[type="reset"][disabled], .button:disabled, .button[disabled],
-a.button:disabled, a.button[disabled] {
+input:disabled, input[disabled] {
+  border: solid 1px #aaa;
+  background: #eee;
+  color: #aaa;
+  pointer-events: none;
+  cursor: default;
+}
+button:disabled, button[disabled], button:active:disabled, button:active[disabled],
+button:focus:disabled, button:focus[disabled], button:visited:disabled,
+button:visited[disabled], button:link:disabled, button:link[disabled],
+input[type="submit"]:disabled, input[type="submit"][disabled],
+input[type="submit"]:active:disabled, input[type="submit"]:active[disabled],
+input[type="submit"]:focus:disabled, input[type="submit"]:focus[disabled],
+input[type="submit"]:visited:disabled, input[type="submit"]:visited[disabled],
+input[type="submit"]:link:disabled, input[type="submit"]:link[disabled],
+input[type="reset"]:disabled, input[type="reset"][disabled],
+input[type="reset"]:active:disabled, input[type="reset"]:active[disabled],
+input[type="reset"]:focus:disabled, input[type="reset"]:focus[disabled],
+input[type="reset"]:visited:disabled, input[type="reset"]:visited[disabled],
+input[type="reset"]:link:disabled, input[type="reset"]:link[disabled],
+.button:disabled, .button[disabled], .button:active:disabled,
+.button:active[disabled], .button:focus:disabled, .button:focus[disabled],
+.button:visited:disabled, .button:visited[disabled], .button:link:disabled,
+.button:link[disabled], a.button:disabled, a.button[disabled],
+a.button:active:disabled, a.button:active[disabled], a.button:focus:disabled,
+a.button:focus[disabled], a.button:visited:disabled, a.button:visited[disabled],
+a.button:link:disabled, a.button:link[disabled] {
   border: solid 1px #aaa;
   background: #eee;
   color: #aaa;
@@ -404,6 +425,7 @@ form.table > div {
 form.table > div > label {
   display: inline-block;
   text-align: right;
+  vertical-align: top;
   width: 200px;
 }
 form.table > div > label:after {
