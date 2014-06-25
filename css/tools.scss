@@ -4,6 +4,9 @@
 }
 
 
+/* ================================ */
+
+
 .left{
 	text-align: left;
 }
@@ -19,16 +22,33 @@
 }
 
 
-.height-control{
+/* ================================ */
+
+
+.height-control-table{
 	display: table;
 	border-spacing: 2px;
 	width: 100%;
 }
 
 
-.height-control > div{
+.height-control-table > div{
 	display: table-cell;
 	rem--border: solid 1px black;
 	rem--background: yellow;
 }
+
+
+/* ================================ */
+
+
+.height-control{
+}
+
+
+.height-control > div{
+	display: inline-block;
+	vertical-align: top;
+}
+
 

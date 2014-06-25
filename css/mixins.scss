@@ -5,6 +5,14 @@
 }
 
 
+@mixin ie6box(){
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+
+}
+
+
 @mixin linear-gradient($a, $b, $c){
 	background-image: -webkit-linear-gradient(top, $a, $b, $c);
 	background-image:      -o-linear-gradient(top, $a, $b, $c);
@@ -22,7 +30,7 @@
 
 @mixin box() {
 	@include box-transperant();
-	
+
 	background: $light;
 }
 
@@ -38,8 +46,8 @@
 	color: $black;
 
 	vertical-align: middle;
-	
-	
+
+
 	&:disabled,
 	&[disabled]{
 		border: solid 1px $middle;

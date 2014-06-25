@@ -9,49 +9,61 @@ sm	=	 568	,	@media screen and (min-width:  568px)
 
 
 
-.col-1	,	.col-xl-1	,	.col-lg-1	,	.col-md-1	,	.col-sm-1	,
-.col-2	,	.col-xl-2	,	.col-lg-2	,	.col-md-2	,	.col-sm-2	,
-.col-3	,	.col-xl-3	,	.col-lg-3	,	.col-md-3	,	.col-sm-3	,
-.col-4	,	.col-xl-4	,	.col-lg-4	,	.col-md-4	,	.col-sm-4	,
-.col-5	,	.col-xl-5	,	.col-lg-5	,	.col-md-5	,	.col-sm-5	,
-.col-6	,	.col-xl-6	,	.col-lg-6	,	.col-md-6	,	.col-sm-6	,
-.col-7	,	.col-xl-7	,	.col-lg-7	,	.col-md-7	,	.col-sm-7	,
-.col-8	,	.col-xl-8	,	.col-lg-8	,	.col-md-8	,	.col-sm-8	,
-.col-9	,	.col-xl-9	,	.col-lg-9	,	.col-md-9	,	.col-sm-9	,
-.col-10	,	.col-xl-10	,	.col-lg-10	,	.col-md-10	,	.col-sm-10	,
-.col-11	,	.col-xl-11	,	.col-lg-11	,	.col-md-11	,	.col-sm-11	,
+@mixin grid-default($res){
+	.col#{$res}-1	,
+	.col#{$res}-2	,
+	.col#{$res}-3	,
+	.col#{$res}-4	,
+	.col#{$res}-5	,
+	.col#{$res}-6	,
+	.col#{$res}-7	,
+	.col#{$res}-8	,
+	.col#{$res}-9	,
+	.col#{$res}-10	,
+	.col#{$res}-11	,
+	.col#{$res}-12	,
 
-.col-12	,	.col-xl-12	,	.col-lg-12	,	.col-md-12	,	.col-sm-12	,
-.col-f2	,	.col-xl-f2	,	.col-lg-f2	,	.col-md-f2	,	.col-sm-f2	,
-.col-f1	,	.col-xl-f1	,	.col-lg-f1	,	.col-md-f1	,	.col-sm-f1	,
-.col-f0	,	.col-xl-f0	,	.col-lg-f0	,	.col-md-f0	,	.col-sm-f0	,
+	.col#{$res}-f2	,
+	.col#{$res}-f1	,
+	.col#{$res}-f0{
+		display: inline-block;
+		width: 100%;
+		vertical-align: top;
 
-.col-do-not-delete{
-	display: inline-block;
-	width: 100%;
-	vertical-align: top;
+		@include ie6box();
+	}
 }
 
 
 
 @mixin grid($res){
-.col#{$res}-1	{ width:   8.33%;}
-.col#{$res}-2	{ width:  16.66%;}
-.col#{$res}-3	{ width:  25.00%;}
-.col#{$res}-4	{ width:  33.33%;}
-.col#{$res}-5	{ width:  41.66%;}
-.col#{$res}-6	{ width:  50.00%;}
-.col#{$res}-7	{ width:  58.33%;}
-.col#{$res}-8	{ width:  66.66%;}
-.col#{$res}-9	{ width:  75.00%;}
-.col#{$res}-10	{ width:  83.33%;}
-.col#{$res}-11	{ width:  91.66%;}
-.col#{$res}-12	{ width: 100.00%;}
+	.col#{$res}-1	{ width:   8.33%; }
+	.col#{$res}-2	{ width:  16.66%; }
+	.col#{$res}-3	{ width:  25.00%; }
+	.col#{$res}-4	{ width:  33.33%; }
+	.col#{$res}-5	{ width:  41.66%; }
+	.col#{$res}-6	{ width:  50.00%; }
+	.col#{$res}-7	{ width:  58.33%; }
+	.col#{$res}-8	{ width:  66.66%; }
+	.col#{$res}-9	{ width:  75.00%; }
+	.col#{$res}-10	{ width:  83.33%; }
+	.col#{$res}-11	{ width:  91.66%; }
+	.col#{$res}-12	{ width: 100.00%; }
 
-.col#{$res}-f2	{ width:  61.80%;}
-.col#{$res}-f1	{ width:  38.20%;}
-.col#{$res}-f0	{ width:  23.60%;}
+	.col#{$res}-f2	{ width:  61.80%; }
+	.col#{$res}-f1	{ width:  38.20%; }
+	.col#{$res}-f0	{ width:  23.60%; }
 }
+
+
+
+/* Default values, shared for all grids */
+
+@include grid-default("");
+@include grid-default("-sm");
+@include grid-default("-md");
+@include grid-default("-lg");
+@include grid-default("-xl");
 
 
 
